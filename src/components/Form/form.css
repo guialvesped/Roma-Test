@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.container img {
+    max-width: 200px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form button{
+    width: 330px;
+    padding: 10px 15px 10px 15px;
+    background-color: #007aff;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+}

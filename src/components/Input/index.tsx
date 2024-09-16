@@ -11,8 +11,10 @@ interface InputProps {
 const Input : React.FC<InputProps> = (props : InputProps) => {
     return(
         <>
-        <label>{props.label}</label>
-        <input type={props.type} required placeholder={props.placeholder} onChange={props.addValue}/>
+        <label>
+            <a>{props.label}</a>
+            <input type={props.type} required placeholder={props.placeholder} onChange={props.addValue}/>
+        </label>
         </>
     )
 } 
