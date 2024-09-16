@@ -10,8 +10,9 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    padding: 20px 20px 40px 20px;
 }
-form button{
+#submit{
     width: 330px;
     padding: 10px 15px 10px 15px;
     background-color: #007aff;
@@ -20,4 +21,40 @@ form button{
     font-weight: bold;
     border-radius: 5px;
     margin-top: 15px;
+    cursor: pointer;
+}
+.signGoogle{
+    border-top: 1px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 20px 20px 20px;
+    max-width: 325px;
+}
+.signGoogle button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    width: 330px;
+    padding: 10px 15px 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.signGoogle button img {
+    max-width: 20px;
+}
+.signGoogle p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#signUp {
+    text-decoration: none;
+    color: #007aff;
+    font-size: 14px;
 }

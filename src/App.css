@@ -1,4 +1,15 @@
 #root {
   margin: 0 ;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: "Nunito Sans", sans-serif;
+}
+.imgLat{
+  height: 100vh;
+  width: 100vw;
+}
+.imgLat img {
+  max-height: 100vh;
+  width: 70vw;
 }
