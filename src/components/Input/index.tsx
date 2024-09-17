@@ -5,9 +5,11 @@ interface InputProps {
     type : string,
     placeholder : string,
     label : string,
-    addValue : (e: React.ChangeEvent<HTMLInputElement>) => void,
+    onChange : (e: React.ChangeEvent<HTMLInputElement>) => void,
     isPassword : boolean,
     onClick ?: () => void,
+    value : string,
+    name : string,
     eyeImg ?: string;
 }
 
@@ -16,8 +18,16 @@ const Input : React.FC<InputProps> = (props : InputProps) => {
         <>
         <a>{props.label}</a>
         <label>
-            <input type={props.type} required placeholder={props.placeholder} onChange={props.addValue}/>
-            {props.isPassword ? <img src={props.eyeImg} id="visibility" onClick={props.onClick}  alt="Mudar visibilidade" /> : ""}
+            <input 
+                aria-label="Your information will be safe with us" 
+                type={props.type} 
+                value={props.value} 
+                name={props.name} 
+                required 
+                placeholder={props.placeholder} 
+                onChange={props.onChange}
+            />
+            {props.isPassword ? <img src={props.eyeImg} id="visibility" onClick={props.onClick}  alt="Change password visibility" /> : ""}
         </label>
         </>
     )

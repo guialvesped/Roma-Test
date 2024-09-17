@@ -13,6 +13,13 @@ form {
     gap: 15px;
     padding: 20px 20px 40px 20px;
 }
+.error{
+    color: #dc2626;
+    font-size: 12px;
+    background-color: #fecaca;
+    border: #dc2626 solid 1px;
+    border-radius: 8px;
+}
 #submit{
     min-width: 330px;
     width: 20vw;
@@ -24,6 +31,14 @@ form {
     border-radius: 5px;
     margin-top: 15px;
     cursor: pointer;
+    font-family: "Nunito Sans", sans-serif;
+    transition: box-shadow 1s ease-in-out, background-color 1s ease-in-out,color 1s ease-in-out, border 1s ease-in-out;
+}
+#submit:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #ffffff;
+    color: #007aff;
+    border: #007aff 1px solid;
 }
 .signGoogle{
     border-top: 1px solid #f2f2f2;
@@ -46,6 +61,14 @@ form {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Nunito Sans", sans-serif;
+    transition: box-shadow 1s ease-in-out, background-color 1s ease-in-out,color 1s ease-in-out, border 1s ease-in-out;
+}
+.signGoogle button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #ffffff;
+    color: #333333;
+    border: #333333 1px solid;
 }
 .signGoogle button img {
     max-width: 20px;
@@ -61,6 +84,7 @@ form {
     color: #007aff;
     font-size: 14px;
 }
+
 @media only screen and (max-width: 700px){
     .container{
         flex-direction: column-reverse;
