@@ -26,39 +26,42 @@ const Form : React.FC = () => {
         <>
         <div className="container">
             <img src={Logo} alt="" />
-            <form onSubmit={handleSubmit}>
-                <h2>Nice to see you again</h2>
-                <Input 
-                    type="text"
-                    placeholder="Email or phone number" 
-                    label="Login" 
-                    isPassword = {false}
-                    addValue={(e) => setEmail(e.target.value)}
-                />
-                <Input 
-                    type={isPasswordVisible ? "text" : "password"}
-                    placeholder="Enter password" 
-                    label="Password" 
-                    isPassword= {true}
-                    eyeImg={isPasswordVisible ? eyeOff : eyeOn}
-                    onClick={togglePasswordVisibility}
-                    addValue={(e) => setPassword(e.target.value)}
-                />
-                <SwitchBox/>
-                <button id="submit" type="submit">Sign In</button>
-            </form>
-            <div className="signGoogle">
-                <button>
-                    <img src={googleLogo} alt="" />
-                    Or sign in with Google
-                </button>
-                <p>
-                    Don't have an account?
-                    <a href="#" id="signUp">
-                        Sign up now
-                    </a>
-                </p>
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <h2>Nice to see you again</h2>
+                    <Input 
+                        type="text"
+                        placeholder="Email or phone number" 
+                        label="Login" 
+                        isPassword = {false}
+                        addValue={(e) => setEmail(e.target.value)}
+                    />
+                    <Input 
+                        type={isPasswordVisible ? "text" : "password"}
+                        placeholder="Enter password" 
+                        label="Password" 
+                        isPassword= {true}
+                        eyeImg={isPasswordVisible ? eyeOff : eyeOn}
+                        onClick={togglePasswordVisibility}
+                        addValue={(e) => setPassword(e.target.value)}
+                    />
+                    <SwitchBox/>
+                    <button id="submit" type="submit">Sign In</button>
+                </form>
+                <div className="signGoogle">
+                    <button>
+                        <img src={googleLogo} alt="" />
+                        Or sign in with Google
+                    </button>
+                    <p>
+                        Don't have an account?
+                        <a href="#" id="signUp">
+                            Sign up now
+                        </a>
+                    </p>
+                </div>
             </div>
+            
         </div>
         
         </>
