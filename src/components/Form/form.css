@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 30px;
+    box-sizing: border-box;
 }
 .container img {
     max-width: 200px;
@@ -13,7 +14,8 @@ form {
     padding: 20px 20px 40px 20px;
 }
 #submit{
-    width: 330px;
+    min-width: 330px;
+    width: 20vw;
     padding: 10px 15px 10px 15px;
     background-color: #007aff;
     border: none;
@@ -38,7 +40,8 @@ form {
     gap: 5px;
     background-color: #333333;
     color: #ffffff;
-    width: 330px;
+    min-width: 330px;
+    width: 20vw;
     padding: 10px 15px 10px 15px;
     border: none;
     border-radius: 5px;
