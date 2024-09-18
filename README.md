@@ -58,4 +58,7 @@ Este projeto consiste em uma tela de login desenvolvida utilizando **React**, **
   - Pasta assets - Dentro desta pasta há uma pasta "img" com todas as imagens do projeto
   - App file - Nesta pasta estão todos os componenetes em funcionamento
 
-
+ ## Autor 
+👨‍💻 Nome: Guilherme Alves Pedroso
+📧 Email: [alvespedrosog@gmail.com](mailto:alvespedrosog@gmail.com)
+🔗 LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/guilherme-alves-pedroso-8474aa276/)
