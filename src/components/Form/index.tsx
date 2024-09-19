@@ -17,9 +17,9 @@ import eyeOff from '../../assets/img/eyeOff.svg'
       }
 
 const Form : React.FC = () => {
-    const [formData, setFormData] = useState<FormData>({emailPhone:"", password:""})
-    const [formErrors, setFormErrors] = useState<FormErrors>({})
-    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+    const [formData, setFormData] = useState<FormData>({emailPhone:"", password:""})//Usado para salvar os dados inseridos
+    const [formErrors, setFormErrors] = useState<FormErrors>({})//Usado para salvar os erros do dados
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);//Usado para impedir o envio do formulário
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -29,7 +29,7 @@ const Form : React.FC = () => {
         });
     };
 
-    const validate = () => {
+    const validate = () => { //Valida se os campos de email e senha são validos
         const errors : FormErrors = {};
         if (!formData.emailPhone) {
             errors.emailPhone = "O campo email é obrigatório.";
@@ -48,13 +48,13 @@ const Form : React.FC = () => {
         return errors
     };
 
-    useEffect(() => {
+    useEffect(() => { //Troca o FormErrors sempre que os dados inseridos ou o Issubmitting mudam
         if (isSubmitting) {
           setFormErrors(validate());
         }
       }, [formData, isSubmitting]);
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { //Previne que o formulário seja enviado até os dados serem válidos
         e.preventDefault();
         setIsSubmitting(true);
 
@@ -67,9 +67,9 @@ const Form : React.FC = () => {
         }
     };
 
-    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);//Muda a visibilidade da senha
 
-    const togglePasswordVisibility = () => {
+    const togglePasswordVisibility = () => {//Garante a mudança do estado da visibilidade
         setIsPasswordVisible(!isPasswordVisible);
     };
 

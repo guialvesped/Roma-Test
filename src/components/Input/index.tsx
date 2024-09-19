@@ -2,15 +2,15 @@ import React from "react";
 import './input.css'
 
 interface InputProps {
-    type : string,
-    placeholder : string,
-    label : string,
-    onChange : (e: React.ChangeEvent<HTMLInputElement>) => void,
-    isPassword : boolean,
-    onClick ?: () => void,
-    value : string,
-    name : string,
-    eyeImg ?: string;
+    type : string,//Tipo do input
+    placeholder : string,//Placeholder do input
+    label : string,//Texto do label
+    onChange : (e: React.ChangeEvent<HTMLInputElement>) => void,//Função que realiza sempre que os dados mudam
+    isPassword : boolean,//Usado para notificar se é um input de senha ou não
+    onClick ?: () => void,//Muda a visibilidade da senha com click
+    value : string,//valor para ser guardado nas variáveis
+    name : string,//nome para identificar de onde pegar os dados
+    eyeImg ?: string;//Imagem para mudar a visibilidade da senha
 }
 
 const Input : React.FC<InputProps> = (props : InputProps) => {
