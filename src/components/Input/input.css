@@ -21,11 +21,15 @@ input {
     min-width: 300px;
     width: 20vw;
     border-radius: 5px 5px 5px 5px;
-    transition: border-right 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-out;
+    /*transition: border-right 0.2s ease-in-out, border-bottom 0.2s ease-in-out;*/
 }
 input:focus {
-    border-right: #333333 3px solid;
+    box-shadow: #333333 3px 4px;
+    outline: none;
+/*   border-right: #333333 3px solid;
     border-bottom: #333333 4px solid;
+    */ 
 }
 input::placeholder {
     font-size: 16px;

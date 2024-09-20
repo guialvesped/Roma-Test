@@ -7,14 +7,14 @@ import googleLogo from '../../assets/img/google-logo.svg'
 import eyeOn from '../../assets/img/eyeOn.svg'
 import eyeOff from '../../assets/img/eyeOff.svg'
 
-    interface FormData {
+interface FormData {
         emailPhone : string,
         password : string
-    }
-    interface FormErrors {
+}
+interface FormErrors {
         emailPhone?: string,
         password?: string
-      }
+}
 
 const Form : React.FC = () => {
     const [formData, setFormData] = useState<FormData>({emailPhone:"", password:""})//Usado para salvar os dados inseridos
@@ -62,7 +62,6 @@ const Form : React.FC = () => {
         setFormErrors(errors);
 
         if (Object.keys(errors).length === 0) {
-        console.log("Formulário enviado com sucesso!", formData);
         setIsSubmitting(false);
         }
     };
